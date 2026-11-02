@@ -1,6 +1,16 @@
 # 여러 프로젝트에서 만든 개발 도구
 
-게임 기능을 만들면서 반복되는 편집과 확인 작업도 도구로 옮겼습니다. BuilderRPG에서는 지형 생성 과정을, Traveler’s Choice에서는 UI 색상과 에셋 확인을, Traveler’s Choice·CTS에서는 테스트를 시작할 씬 선택을 다뤘습니다.
+게임 기능을 만들면서 반복되는 편집과 확인 작업도 도구로 옮겼습니다. BuilderRPG에서는 지형 생성과 상호작용 편집을, Traveler’s Choice에서는 UI 색상과 에셋 확인을, Traveler’s Choice·CTS에서는 테스트를 시작할 씬 선택을 다뤘습니다.
+
+## BuilderRPG · 상호작용 슬롯을 편집하는 인스펙터
+
+2023년 작업 기록에 상호작용 슬롯용 커스텀 인스펙터가 남아 있습니다. 슬롯 목록을 편집하고 이름·설명·아이콘·레벨을 지정하며, 선택한 상호작용 유형에 따라 애니메이션·대기시간·이벤트 같은 필드를 표시했습니다.
+
+![BuilderRPG 상호작용 슬롯 편집 인스펙터](images/builder-interaction-inspector-2023.png)
+
+2023년 8월 작업 기록의 `Prop_Sample` 인스펙터입니다. Task 유형의 작업 취소 슬롯과 실행 이벤트를 편집하는 모습이 남아 있습니다.
+
+지형 생성 파라미터를 다루는 도구와 함께, 게임 콘텐츠를 작성하는 편집 UI까지 만들었던 사례입니다. 현재 코드에서는 관련 필드 변경으로 이 인스펙터가 비활성화되어 있어 과거 구현 범위로 소개합니다.
 
 ## Color Styler · 색 값보다 역할을 편집하기
 
@@ -39,12 +49,14 @@ Traveler’s Choice와 CTS 양쪽에 같은 목적의 `InitialSceneWindow`가 �
 
 Terrain Snap은 2026년 AI와 진행한 후기 정비에 해당합니다. 초기부터 직접 작성한 도구와 작업 방식을 구분합니다.
 
-이 사례들에서 되돌아볼 지점은 창이나 인스펙터를 만들었다는 사실만이 아닙니다. 반복 실행의 진입점을 줄이고, 바뀐 데이터의 참조를 함께 갱신하고, 결과를 확인하는 수단을 만드는 방향으로 도구를 확장했습니다.
+콘텐츠 작성, 반복 실행, 참조 갱신과 결과 확인을 도구에 담았습니다. 프로젝트마다 필요한 작업 흐름을 편집 UI와 검증 수단으로 옮긴 과정입니다.
 
 ## 원본 코드
 
 아래 Traveler’s Choice·CTS 링크는 현재 비공개 원본으로, 저장소 접근 권한이 필요합니다.
 
+- [BuilderRPG · 인스펙터 작업 기록](https://github.com/TcDRair/BuilderRPG/blob/ff4592bf830bcffe0cffec7a73430ea75390d08b/Assets/Ideas/Today%27s%20Shot/2023.08/230816.png)
+- [BuilderRPG · 상호작용과 현재 편집 경로](https://github.com/TcDRair/BuilderRPG/blob/ff4592bf830bcffe0cffec7a73430ea75390d08b/docs/03-상호작용-작업큐.md)
 - [Color Styler](https://github.com/TcDRair/Travelers-Choice/tree/main/Assets/ThirdParty/Utilities/Color%20Styler)
 - [Traveler’s Choice · 시작 씬 선택기](https://github.com/TcDRair/Travelers-Choice/blob/main/Assets/Scripts/Misc/Editor/InitialSceneWindow.cs)
 - [Traveler’s Choice · Asset ID Viewer](https://github.com/TcDRair/Travelers-Choice/blob/main/Assets/Scripts/Misc/Editor/AssetIdViewer.cs)

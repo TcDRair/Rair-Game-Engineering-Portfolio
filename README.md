@@ -11,8 +11,8 @@ BuilderRPG의 절차적 섬 생성 결과. 시드 `20260730`, 맵 크기 512×51
 | 사례 | 다룬 문제 | 작업 방식 |
 |---|---|---|
 | [BuilderRPG · 2D 지도에서 3D 지형으로](docs/builder-rpg.md) | 공간 탐색 비용, 지형 데이터 전달, Terrain·프롭 적용 | 초기 게임 시스템 직접 구현, 후기 복구·테스트 정비에 AI 활용 |
-| [여러 프로젝트에서 만든 개발 도구](docs/editor-tools.md) | UI 색상 관리, 반복 실행, 에셋 참조 확인 | 직접 구현, Color Styler에 Copilot 줄 단위 제안 활용 |
-| [LiC2 · AI 역할 조율과 플레이 검증](docs/lic2.md) | 세션 간 범위·완료 기준 공유, 실패 이후 재설계, 경계 상태 재현 | Planner·Generator·Evaluator 세션 수동 조율, 직접 플레이와 코드 확인 |
+| [여러 프로젝트에서 만든 개발 도구](docs/editor-tools.md) | 상호작용 편집, UI 색상 관리, 반복 실행과 참조 확인 | 초기 도구 직접 구현, Color Styler에 Copilot 제안 활용, 후기 정비에 AI 활용 |
+| [LiC2 · 에이전트 역할 조율과 스프린트 운영](docs/lic2.md) | 하네스, 스프린트 계약과 핸드오프, 평가·재검증 | Planner·Generator·Evaluator 세션 수동 조율, 직접 플레이와 코드 확인 |
 
 ## 프로젝트와 원본
 
